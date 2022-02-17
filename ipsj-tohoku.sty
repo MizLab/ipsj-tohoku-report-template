@@ -17,12 +17,9 @@
   \rfoot{{\footnotesize \textcopyright\ \number\year \ #1}}
 }
 
-\newlength{\columntextwidth}
-\setlength{\columntextwidth}{0.5\textwidth}
-\addtolength{\columntextwidth}{-0.5\columnsep}
+\renewcommand{\footnoterule}{\hrule\vspace{0.3em}}
 
 \makeatletter
-\def\footnoterule{\kern-3\p@\hrule\@width\columntextwidth\kern2.6\p@}
 \renewcommand{\maketitle}{
   \begin{center}
     {\LARGE\textbf{\@title}\vskip\baselineskip}
