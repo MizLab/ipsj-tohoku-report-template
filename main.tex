@@ -1,3 +1,4 @@
+% \RequirePackage{plautopatch} % If use uplatex, enable this line.
 \documentclass[twocolumn,paper=a4paper,landscape,fontsize=9pt]{jlreq}
 \usepackage{url}
 \usepackage{graphicx}
@@ -19,6 +20,14 @@
 \affiliation{1}{情報処理学会東北支部大学}
 
 \maketitle
+
+\begin{abstract}
+  これは非公式の情報処理学会東北支部研究会の発表資料テンプレートである。
+
+  uplatex,lualatexで動作することが確認されている。
+
+  なお、このabstractは再定義されているため、プリアンブルに記述すると動作しない。
+\end{abstract}
 
 支部ページ\cite{ipsjTohoku}で配布されているファイルがluaLaTeXから読み込めなかったので作成しました。
 
