@@ -1,0 +1,40 @@
+\documentclass[twocolumn,paper=a4paper,landscape,fontsize=9pt]{jlreq}
+\usepackage{url}
+\usepackage{graphicx}
+
+\usepackage[backend=bibtex,sorting=none]{biblatex}
+\usepackage{ipsj-tohoku}
+
+\bibliography{cites}
+
+\title{luaLaTeXで情報処理学会東北支部研究会の発表資料をつくる}
+
+\author{Omochice\thanks{1}}
+
+% \TechrepVolNoDate{2021-6}{}{2022/02/21}
+% \Copyright{Information Processing Society of Japan}
+
+\begin{document}
+
+\affiliation{1}{情報処理学会東北支部大学}
+
+\maketitle
+
+支部ページ\cite{ipsjTohoku}で配布されているファイルがluaLaTeXから読み込めなかったので作成しました。
+
+非公式なものなので使えるかどうかは保証しません。
+
+使い方については、TeXのファイル(main.tex)を見ていただくのが早いかと思われます。
+
+以下に注意点をいくつか上げます。
+
+\begin{itemize}
+  \item 内部でgeometryパッケージを読み込んでいるため、他の方法(jlreqの読み込み時指定など)と鑑賞する可能性があります。
+  \item \string\maketiteや\string\thanksを上書きしているため、他のパッケージの読み込みのあとに\string\usepackageするのを推奨します。
+  \item \string\columnsepを使用しているため、二段組環境外では動きません。
+\end{itemize}
+
+
+\printbibliography[title=参考文献]
+
+\end{document}

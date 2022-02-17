@@ -1,0 +1,44 @@
+\usepackage[top=30truemm,bottom=30truemm,left=25truemm,right=25truemm]{geometry}
+\usepackage{fancyhdr}
+
+\setlength{\columnsep}{40pt}
+
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+
+\lhead{{\footnotesize 情報処理学会東北支部研究報告\\[-7pt]IPSJ Tohoku Branch SIG Technical Report}}
+\rhead{}
+
+\newcommand{\TechrepVolNoDate}[3]{
+  \rhead{{\footnotesize Vol.#1 No.#2\\[-7pt]#3}}
+}
+
+\newcommand{\Copyright}[1]{
+  \rfoot{{\footnotesize \textcopyright\ \number\year \ #1}}
+}
+
+\newlength{\columntextwidth}
+\setlength{\columntextwidth}{0.5\textwidth}
+\addtolength{\columntextwidth}{-0.5\columnsep}
+
+\makeatletter
+\def\footnoterule{\kern-3\p@\hrule\@width\columntextwidth\kern2.6\p@}
+\renewcommand{\maketitle}{
+  \begin{center}
+    {\LARGE\textbf{\@title}\vskip\baselineskip}
+    {\Large\@author\vskip\baselineskip}
+  \end{center}
+}
+\makeatother
+
+\renewcommand{\thanks}[1]{
+  \footnotemark[#1]
+}
+
+\newcommand{\affiliation}[2]{
+  \footnotetext[#1]{#2}
+}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\renewenvironment{abstract}{\begin{center}\begin{minipage}{0.83\columntextwidth}\setlength{\parindent}{1em}\footnotesize}{\vspace{3cm}\end{minipage}\end{center}}
